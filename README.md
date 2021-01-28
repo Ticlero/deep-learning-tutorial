@@ -46,4 +46,4 @@ print(W * 5 + b)
 print(W * 2.5 + b)
 ```
 ### 경사하강법
-!(./images/KakaoTalk_20210128_182813552.jpg)
+![Gradient Descent](./images/KakaoTalk_20210128_182813552.jpg)
