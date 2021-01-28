@@ -23,9 +23,10 @@ b = tf.Variable(0.5) // bias(편향) 일반적으로 랜덤 값으로 설정된�
 for i in range(100):
     # Gradient descent
     with tf.GradientTape() as tape: // GradientTape는 '경사하강법'으로 기본적으로 W,b를 찾아내는 알고리즘이다. W,b 값을 조금씩 줄여나가며 찾아낸다. 
-        //linear regression 모델
+        //linear regression 모델, 값 예측하기
         hypothesis = W * x_data + b
         // total 비용(error, cost, 오차)의 합을 구하는 코드 tf의 reduce_mean은 텐서플로우 차원을 줄이면서 연산을 함 (배열의 1차원 2차원)
+        // 예측된 값과 실제 값의 오차의 합 -> Avg square sum
         cost = tf.reduce_mean(tf.square(hypothesis - y_data)) 
     
     // 경사하강법으로 W, b의 기울기를 계산
@@ -44,3 +45,5 @@ print()
 print(W * 5 + b)
 print(W * 2.5 + b)
 ```
+### 경사하강법
+!(./images/KakaoTalk_20210128_182813552.jpg)
